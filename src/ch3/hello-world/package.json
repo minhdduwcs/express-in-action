@@ -1,0 +1,8 @@
+{
+  "name": "hello-world",
+  "author": "https://github.com/scwuddhnim",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
