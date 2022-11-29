@@ -20,10 +20,10 @@
   - cách define một module và sử dụng module đó trong một file khác
 
 - **2.3 Node: an asynchronous world**
-  - [example](./src/ch2/read-file): giới thiệu về asynchronous của Node.js thông qua việc read file
+  - [read file](./src/ch2/read-file): giới thiệu về asynchronous của Node.js thông qua việc read file
 
 - **2.4 Building a web server with Node: the http module**
-  - [example](./src/ch2/hello-world): viết chương trình hello world của web server sử dụng http module (của Node.js)
+  - [hello world](./src/ch2/hello-world): viết chương trình hello world của web server sử dụng http module (của Node.js)
 
 ## Chapter 3: Foundations of Express
 
@@ -31,32 +31,32 @@
   - giới thiệu về nguyên lý của middleware
 
 - **3.1.1 Hello World with Express**
-  - [example](./src/ch3/hello-world): dựng một hello world Express project
+  - [hello world](./src/ch3/hello-world): dựng một hello world Express project
 
 - **3.1.2 How middleware works at a high level**
   - cách design một middleware stack gồm logging middleware, authorization middleware và send secret info middleware
 
 - **3.1.3 Middleware code that’s passive**
-  - [example](./src/ch3/hello-world): bổ sung log middleware vào hello world program ở trên
+  - bổ sung log middleware vào hello world program ở trên
 
 - **3.1.4 Middleware code that changes the request and response**
-  - [example](./src/ch3/hello-world): bổ sung authorization middleware vào hello world program ở trên
+  - bổ sung authorization middleware vào hello world program ở trên
 
 - **3.1.5 Third-party middleware libraries**
   - [logging middleware](./src/ch3/logging-middleware): sử dụng logging middleware trong morgan library
   - [static middleware](./src/ch3/static-middleware): sử dụng static middleware có sẵn trong Express
 
 - **3.2 Routing**
-  - [example](./src/ch3/routing): sử dụng routing để map request đến một handler cụ thể (có hỗ trợ regular expression để thực hiện các complex mapping)
+  - [routing](./src/ch3/routing): sử dụng routing để map request đến một handler cụ thể (có hỗ trợ regular expression để thực hiện các complex mapping)
 
 - **3.3 Extending request and response**
   - `req` và `res` object của Express có một số extra property, ví dụ như `req.ip` có thể dùng để block các evil IP
 
 - **3.4 Views**
-  - [example](./src/ch3/ejs-example): sử dụng EJS view engine để cung cấp các HTML file
+  - [EJS example](./src/ch3/ejs-example): sử dụng EJS view engine để cung cấp các HTML file
 
 - **3.5 Example: putting it all together in a guestbook**
-  - [example](./src/ch3/guestbook): guestbook app gồm home page và một page cho phép thêm các guestbook entry
+  - [guestbook](./src/ch3/guestbook): guestbook app gồm home page và một page cho phép thêm các guestbook entry
 
 ## Chapter 4: Middleware
 
@@ -64,7 +64,7 @@
   - giới thiệu về nguyên lý hoạt động của middleware stack
 
 - **4.2 Example app: a static file server**
-  - [example](./src/ch4/static-file): middleware stack của application này: logger, static file và 404 handler
+  - [static file](./src/ch4/static-file): middleware stack của application này: logger, static file và 404 handler
 
 - **4.2.1 Getting set up**
   - dựng Node.js project và cài đặt các dependency
@@ -85,7 +85,7 @@
   - sử dụng static middleware của Express để thay thế cho static file middleware đã viết trước đó
 
 - **4.3 Error-handling middleware**
-  - [example](./src/ch4/error-handling-middleware): giới thiệu về error-handling middleware: là các middleware gồm 4 tham số
+  - [error handling middleware](./src/ch4/error-handling-middleware): giới thiệu về error-handling middleware: là các middleware gồm 4 tham số
 
 ## Chapter 5: Routing
 
@@ -93,7 +93,7 @@
   - công dụng của routing: map một cặp VERB + URI đến một request handler cụ thể
 
 - **5.1.1 A simple routing example**
-  - [example](./src/ch5/olivia-example): sử dụng routing feature của Express để viết một route `GET /olivia`
+  - [Olivia example](./src/ch5/olivia-example): sử dụng routing feature của Express để viết một route `GET /olivia`
 
 - **5.2 The features of routing**
 
@@ -122,3 +122,44 @@
 
 - **5.6 Putting it all together: a simple routing demo**
   - example: hiển thị nhiệt độ của một thành phố từ ZIP code được nhập vào form
+
+## Chapter 6: Building APIs
+
+- **6.1 A basic JSON API example**
+  - cách hoạt động của API server: các UI khác nhau có thể dùng chung một API server
+
+- **6.2 A simple Express-powered JSON API**
+  - [random number generator](./src/ch6/random-number-generator): khi truy cập vào path `GET /random/:min/:max` sẽ nhận về một số random
+
+- **6.3 Create, read, update, delete APIs**
+  - giới thiệu về CRUD model
+
+- **6.3.1 HTTP verbs (also known as HTTP methods)**
+  -giới thiệu về 4 HTTP method thường dùng nhất: GET, POST, PUT, DELETE
+
+- **6.3.2 CRUD applications with HTTP methods**
+  - map các HTTP method vào trong photo-sharing app
+
+- **6.4 API versioning**
+  - [API versioning](./src/ch6/api-versioning): cách sử dụng router để đánh version cho API
+
+- **6.5 Setting HTTP status codes**
+  - giới thiệu chung về các HTTP status code
+
+- **6.5.1 Setting HTTP status codes**
+  - cách set status code trong Express: sử dụng `status` method (là một chainable method)
+
+- **6.5.2 The 100 range**
+  - chỉ nói sơ qua về status code 100 và 101, không đi sâu vào
+
+- **6.5.3 The 200 range**
+  - là các status code thành công: trong quá trình thực hiện không phát sinh ra lỗi
+
+- **6.5.4 The 300 range**
+  - các status code về redirect
+
+- **6.5.5 The 400 range**
+  - các status code thông báo lỗi đến từ client
+
+- **6.5.6 The 500 range**
+  - status code thông báo lỗi đến từ server
