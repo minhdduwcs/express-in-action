@@ -86,3 +86,39 @@
 
 - **4.3 Error-handling middleware**
   - [example](./src/ch4/error-handling-middleware): giới thiệu về error-handling middleware: là các middleware gồm 4 tham số
+
+## Chapter 5: Routing
+
+- **5.1 What is routing?**
+  - công dụng của routing: map một cặp VERB + URI đến một request handler cụ thể
+
+- **5.1.1 A simple routing example**
+  - [example](./src/ch5/olivia-example): sử dụng routing feature của Express để viết một route `GET /olivia`
+
+- **5.2 The features of routing**
+
+- **5.2.1 Grabbing parameters to routes**
+  - cách define và lấy các parameter từ URL
+
+- **5.2.2 Using regular expressions to match routes**
+  - sử dụng regular expression để mô tả các parameter phức tạp trên URL
+
+- **5.2.3 Grabbing query arguments**
+  - cách lấy các query argument từ URL
+
+- **5.3 Using routers to split up your app**
+  - cách define các route và các request handler của chúng ở một module riêng (tách ra khỏi file `app.js`)
+
+- **5.4 Serving static files**
+
+- **5.4.1 Static files with middleware**
+  - cải tiến static file example: đăng ký nhiều static file middleware và phân vùng cho chúng (sử dụng path)
+
+- **5.4.2 Routing to static files**
+  - send static file với một route chứa parameter: không thể dùng static middleware của Express được nữa, phải tự define middleware
+
+- **5.5 Using Express with HTTPS**
+  - nguyên lý hoạt động của TLS layer và cách setting HTTPS
+
+- **5.6 Putting it all together: a simple routing demo**
+  - example: hiển thị nhiệt độ của một thành phố từ ZIP code được nhập vào form
