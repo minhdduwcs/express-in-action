@@ -163,3 +163,34 @@
 
 - **6.5.6 The 500 range**
   - status code thông báo lỗi đến từ server
+
+## Chapter 8: Persisting your data with MongoDB
+
+- **8.1 Why MongoDB?**
+  - lý giải việc lựa chọn NoSQL database (cụ thể là MongoDB) thay vì các SQL database khác
+
+- **8.1.1 How Mongo works**
+  - giới thiệu về các khái niệm database, collection, document trong MongoDB
+
+- **8.1.2 For you SQL users out there**
+  - mapping thuật ngữ giữa SQL database và NoSQL database
+
+- **8.2 Talking to Mongo from Node with Mongoose**
+  - [lam](src/ch8/lam): giới thiệu mongoose library, dùng để giao tiếp với MongoDB từ Node.js
+
+- **8.2.1 Setting up your project**
+  - giới thiệu về LAM social application và dựng một project cho application này
+
+- **8.2.2 Creating a user model**
+  - tạo user model: define các field, pre-save action và các method (`name` và `checkPassword`)
+
+- **8.2.3 Using your model**
+  - giới thiệu hầu hết logic của LAM application: register new account, danh sách và chi tiết user
+
+- **8.3 Authenticating users with Passport**
+
+- **8.3.1 Setting up Passport**
+  - setting up the passport middleware: để setup cho passport cần include một số middleware như body-parser, cookie-parser,...
+  - serializing and deserializing users: setup serializeUser và deserializeUser cho passport
+  - the real authentication: áp dụng local strategy cho passport
+  - the routes and the views: thực hiện 3 view còn lại là login, logout và profile editing
