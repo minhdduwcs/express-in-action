@@ -194,3 +194,51 @@
   - serializing and deserializing users: setup serializeUser và deserializeUser cho passport
   - the real authentication: áp dụng local strategy cho passport
   - the routes and the views: thực hiện 3 view còn lại là login, logout và profile editing
+
+## Chapter 9: Testing Express applications
+
+- **9.1 What is testing and why is it important?**
+  - giới thiệu về automated test và các ưu điểm của nó so với manual test
+
+- **9.1.1 Test-driven development**
+  - ưu điểm và nhược điểm của 2 cách viết test: viết test trước và viết code trước
+  - giới thiệu về TDD và life cycle của nó: gồm các step red, green và refactor
+
+- **9.1.2 Cardinal rule: when in doubt, test**
+  - test nhiều code nhất có thể để đảm bảo code hoạt động đúng
+
+- **9.2 Introducing the Mocha testing framework**
+  - [capitalize](src/ch9/capitalize): giới thiệu về testing framework Mocha
+
+- **9.2.1 How does Node.js testing work?**
+  - giới thiệu 3 phần chính của testing trong Node.js: real code, testing code và test runner
+
+- **9.2.2 Setting up Mocha and the Chai assertion library**
+  - thực hiện viết real code (file `capitalize.js`) và thêm file `package.json`
+  - phân biệt giữa 2 library Mocha (là một testing framework) và Chai (là một assertion library)
+
+- **9.2.3 What happens when you run your tests**
+  - khi type `npm test` sẽ chạy tất cả file `.js` trong `test` directory
+
+- **9.2.4 Writing your first test with Mocha and Chai**
+  - tạo file `capitalize.js` và viết test đầu tiên cho `capitalize` function
+
+- **9.2.5 Adding more tests**
+  - thêm các test cho `capitalize` function
+
+- **9.2.6 More features of Mocha and Chai**
+  - running code before each test: cách sử dụng `beforeEach`
+  - testing for errors: dùng khi muốn confirm sẽ ném ra một error ở đây
+  - reversing tests: sử dụng `.not` để đảo ngược assertion
+
+- **9.3 Testing Express servers with SuperTest**
+  - [What's my User Agent](src/ch9/whats-my-useragent): thực thực hiện test các API endpoint thông qua integration test (sử dụng SuperTest library)
+
+- **9.3.1 Testing a simple API**
+  - thực hiện viết các integration test cho các plain-text response
+
+- **9.3.2 Filling in the code for your first tests**
+  - viết real code cho application để đáp ứng các test vừa viết ở trên
+
+- **9.3.3 Testing HTML responses**
+  - thực hiện viết các integration test cho test HTML và real code của chúng
